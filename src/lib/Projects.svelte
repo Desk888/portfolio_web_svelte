@@ -1,24 +1,24 @@
 <script lang="ts">
   const projects = [
     {
-      title: 'E-Commerce Platform',
+      title: 'HyperScriber AI',
       description: 'A modern e-commerce platform built with Next.js, featuring real-time inventory management and seamless payment integration.',
       image: 'https://images.unsplash.com/photo-1517292987719-0369a794ec0f?auto=format&fit=crop&q=80&w=800',
-      tags: ['Next.js', 'Stripe', 'Prisma', 'TypeScript'],
+      tags: ['React', 'Tailwind CSS', 'TypeScript'],
       link: '#'
     },
     {
-      title: 'AI Content Generator',
+      title: 'Social Stoic',
       description: 'An AI-powered platform that generates high-quality content using advanced language models and machine learning algorithms.',
       image: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80&w=800',
-      tags: ['Python', 'TensorFlow', 'FastAPI', 'React'],
+      tags: ['React', 'Tailwind CSS', 'TypeScript'],
       link: '#'
     },
     {
-      title: 'Real-time Analytics Dashboard',
+      title: 'MoodyTube',
       description: 'A comprehensive analytics dashboard providing real-time insights and data visualization for business metrics.',
       image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800',
-      tags: ['Svelte', 'D3.js', 'Node.js', 'MongoDB'],
+      tags: ['Python', 'PostgreSQL', 'Google Cloud'],
       link: '#'
     }
   ];
@@ -27,7 +27,7 @@
 <section id="projects" class="py-24 bg-white">
   <div class="section-container">
     <div class="text-center mb-16">
-      <h2 class="text-4xl md:text-5xl font-bold mb-4">Featured Projects</h2>
+      <h2 class="text-4xl md:text-5xl font-bold mb-4">Featured Projects 💻</h2>
       <p class="text-xl text-dark/70 max-w-2xl mx-auto">
         Explore some of my recent work that showcases my expertise in full-stack development.
       </p>

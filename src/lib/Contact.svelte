@@ -1,7 +1,7 @@
 <section id="contact" class="py-24 bg-white">
   <div class="section-container max-w-4xl">
     <div class="text-center mb-16">
-      <h2 class="text-4xl md:text-5xl font-bold mb-4">Let's Connect</h2>
+      <h2 class="text-4xl md:text-5xl font-bold mb-4">Let's Connect 📥</h2>
       <p class="text-xl text-dark/70">
         Interested in working together? Let's discuss your project and bring your ideas to life.
       </p>

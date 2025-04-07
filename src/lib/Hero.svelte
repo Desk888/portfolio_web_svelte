@@ -15,8 +15,8 @@
   <!-- Content -->
   <div class="section-container relative pt-32 pb-20 min-h-screen flex items-center">
     <div class="max-w-3xl">
-      <h1 class="text-5xl md:text-7xl font-bold mb-6 animate-slide-up">
-        <span class="gradient-text">Creative</span> Full Stack Software Developer
+      <h1 class="text-5xl md:text-6xl font-bold mb-6 animate-slide-up">
+      <span class="gradient-text">Creative</span> Full Stack Software Developer 🚀
       </h1>
       
       <p class="text-xl md:text-2xl text-dark/70 mb-12 animate-slide-up" style="animation-delay: 200ms">

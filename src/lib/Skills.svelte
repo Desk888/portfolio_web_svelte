@@ -4,9 +4,9 @@
       category: 'Frontend Development',
       icon: '🎨',
       items: [
-        { name: 'React/Next.js', level: 95 },
-        { name: 'Vue/Nuxt', level: 90 },
-        { name: 'Svelte/SvelteKit', level: 85 },
+        { name: 'React/Next.js', level: 100 },
+        { name: 'Vue', level: 50 },
+        { name: 'Svelte/SvelteKit', level: 50 },
         { name: 'TypeScript', level: 92 },
         { name: 'Tailwind CSS', level: 88 }
       ]
@@ -15,11 +15,11 @@
       category: 'Backend Development',
       icon: '⚙️',
       items: [
-        { name: 'Node.js', level: 90 },
+        { name: 'Go/Golang', level: 90 },
         { name: 'Python/Django', level: 85 },
-        { name: 'PostgreSQL', level: 88 },
-        { name: 'GraphQL', level: 82 },
-        { name: 'REST APIs', level: 95 }
+        { name: 'PostgreSQL/MySQL/MongoDB', level: 88 },
+        { name: 'Microservices', level: 82 },
+        { name: 'REST APIs / GraphQL / gRPC', level: 95 }
       ]
     },
     {
@@ -39,7 +39,7 @@
 <section id="skills" class="py-24 bg-gradient-to-br from-emerald-100 via-white to-teal-100">
   <div class="section-container">
     <div class="text-center mb-16">
-      <h2 class="text-4xl md:text-5xl font-bold mb-4">Skills & Expertise</h2>
+      <h2 class="text-4xl md:text-5xl font-bold mb-4">Skills & Expertise ⚒️</h2>
       <p class="text-xl text-dark/70 max-w-2xl mx-auto">
         A comprehensive overview of my technical skills and proficiency levels.
       </p>
@@ -57,7 +57,6 @@
               <div>
                 <div class="flex justify-between mb-2">
                   <span class="font-medium">{name}</span>
-                  <span class="text-dark/70">{level}%</span>
                 </div>
                 <div class="h-2 bg-gray-200 rounded-full overflow-hidden">
                   <div
