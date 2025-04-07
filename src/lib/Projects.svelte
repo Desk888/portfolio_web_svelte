@@ -2,29 +2,29 @@
   const projects = [
     {
       title: 'HyperScriber AI',
-      description: 'A modern e-commerce platform built with Next.js, featuring real-time inventory management and seamless payment integration.',
-      image: 'https://images.unsplash.com/photo-1454117096348-e4abbeba002c?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      description: 'Performance-focused and AI-Powered Content Agency for SaaS Startups.',
+      image: 'https://portfolio-website-assets-cdn.s3.eu-west-2.amazonaws.com/hyperscriber_banner.png',
       tags: ['React', 'Tailwind CSS', 'TypeScript'],
-      link: '#'
+      link: 'https://hyperscriber.com/'
     },
     {
       title: 'Social Stoic',
-      description: 'An AI-powered platform that generates high-quality content using advanced language models and machine learning algorithms.',
-      image: 'https://images.unsplash.com/photo-1454117096348-e4abbeba002c?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      description: 'Social Stoic is a company offering dating coaching programs for men worldwide.',
+      image: 'https://portfolio-website-assets-cdn.s3.eu-west-2.amazonaws.com/socialstoic_banner.png',
       tags: ['React', 'Tailwind CSS', 'TypeScript'],
-      link: '#'
+      link: 'https://socialstoic.com/'
     },
     {
       title: 'MoodyTube',
-      description: 'A comprehensive analytics dashboard providing real-time insights and data visualization for business metrics.',
-      image: 'https://images.unsplash.com/photo-1454117096348-e4abbeba002c?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      description: 'A comprehensive YouTube sentiment analysis tool for video creators.',
+      image: 'https://images.unsplash.com/photo-1615525137689-198778541af6?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
       tags: ['Python', 'PostgreSQL', 'Google Cloud'],
-      link: '#'
+      link: 'https://github.com/Desk888/moodytube-youtube-tool'
     }
   ];
 </script>
 
-<section id="projects" class="py-24 bg-white">
+<section id="projects" class="py-24 bg-gradient-to-br from-emerald-100 via-white to-teal-100">
   <div class="section-container">
     <div class="text-center mb-16">
       <h2 class="text-4xl md:text-5xl font-bold mb-4">Featured Projects</h2>

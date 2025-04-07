@@ -1,4 +1,4 @@
-<section id="contact" class="py-24 bg-white">
+<section id="contact" class="py-24 bg-gradient-to-br from-emerald-100 via-white to-teal-100">
   <div class="section-container max-w-4xl">
     <div class="text-center mb-16">
       <h2 class="text-4xl md:text-5xl font-bold mb-4">Let's Connect</h2>

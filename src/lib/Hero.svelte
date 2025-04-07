@@ -1,12 +1,61 @@
 <script lang="ts">
+  import { onMount } from 'svelte';
+
   const socialLinks = [
     { href: 'https://github.com/desk888', icon: 'github', label: 'GitHub' },
     { href: 'https://www.linkedin.com/in/filippinilorenzo/', icon: 'linkedin', label: 'LinkedIn' },
     { href: 'https://twitter.com/https://x.com/lorenzofilipsss', icon: 'twitter', label: 'Twitter' }
   ];
+
+  const words = ['Creative', 'Modern', 'Experienced'];
+  let currentIndex = 0;
+  let currentWord = words[currentIndex];
+  let isAnimating = false;
+
+  function rotateWord() {
+    isAnimating = true;
+    setTimeout(() => {
+      currentIndex = (currentIndex + 1) % words.length;
+      currentWord = words[currentIndex];
+      isAnimating = false;
+    }, 500);
+  }
+
+  onMount(() => {
+    setInterval(rotateWord, 3000);
+  });
 </script>
 
-<section class="min-h-screen relative overflow-hidden">
+<style>
+  .word-rotate {
+    display: inline-block;
+  }
+  
+  .word-rotate.animate-out {
+    animation: rotateOut 1s ease-in-out;
+  }
+  
+  @keyframes rotateOut {
+    0% {
+      transform: translateY(0) rotateX(0);
+      opacity: 1;
+    }
+    50% {
+      transform: translateY(20px) rotateX(-90deg);
+      opacity: 0;
+    }
+    51% {
+      transform: translateY(-20px) rotateX(90deg);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0) rotateX(0);
+      opacity: 1;
+    }
+  }
+</style>
+
+<section class="min-h-screen relative overflow-hidden bg-gradient-to-br from-emerald-100 via-white to-teal-100">
   <!-- Background -->
   <div class="absolute inset-0">
     <div class="absolute inset-0 bg-grid-pattern opacity-[0.2]"></div>
@@ -16,7 +65,9 @@
   <div class="section-container relative pt-32 pb-20 min-h-screen flex items-center">
     <div class="max-w-3xl">
       <h1 class="text-5xl md:text-6xl font-bold mb-6 animate-slide-up">
-      <span class="gradient-text">Creative</span> Full Stack Software Developer 🚀
+        <span class="gradient-text word-rotate" class:animate-out={isAnimating}>{currentWord}</span>
+        <br />
+        Web Developer 🚀
       </h1>
       
       <p class="text-xl md:text-2xl text-dark/70 mb-12 animate-slide-up" style="animation-delay: 200ms">

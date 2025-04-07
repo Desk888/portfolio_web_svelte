@@ -36,7 +36,7 @@
   ];
 </script>
 
-<section id="skills" class="py-24 bg-gradient-to-br from-emerald-100 via-white to-teal-100">
+<section id="skills" class="py-24 bg-white">
   <div class="section-container">
     <div class="text-center mb-16">
       <h2 class="text-4xl md:text-5xl font-bold mb-4">Skills & Expertise</h2>

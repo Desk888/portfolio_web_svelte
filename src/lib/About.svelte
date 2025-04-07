@@ -1,4 +1,4 @@
-<section id="about" class="py-24 bg-gradient-to-br from-emerald-100 via-white to-teal-100">
+<section id="about" class="py-24 bg-white">
   <div class="section-container">
     <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
       <div class="relative max-w-[40%] mx-auto md:max-w-[70%]">
