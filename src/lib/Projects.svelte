@@ -1,4 +1,6 @@
 <script lang="ts">
+  import { onMount } from 'svelte';
+  
   const projects = [
     {
       title: 'HyperScriber AI',
@@ -22,10 +24,143 @@
       link: 'https://github.com/Desk888/moodytube-youtube-tool'
     }
   ];
+
+  onMount(async () => {
+    try {
+      // Import the required modules
+      const { tsParticles } = await import('tsparticles-engine');
+      const { loadSlim } = await import('tsparticles-slim');
+      
+      // Initialize the slim bundle
+      await loadSlim(tsParticles);
+      
+      // Load the particles configuration
+      await tsParticles.load('projects-particles', {
+        fullScreen: { enable: false },
+        fpsLimit: 60,
+        particles: {
+          number: {
+            value: 40,
+            density: {
+              enable: true,
+              value_area: 900
+            }
+          },
+          color: {
+            value: ["#10b981", "#059669", "#d1fae5"]
+          },
+          shape: {
+            type: "circle"
+          },
+          opacity: {
+            value: 0.4,
+            random: true,
+            anim: {
+              enable: true,
+              speed: 0.8,
+              opacity_min: 0.1,
+              sync: false
+            }
+          },
+          size: {
+            value: 2.5,
+            random: true,
+            anim: {
+              enable: true,
+              speed: 1.5,
+              size_min: 0.2,
+              sync: false
+            }
+          },
+          links: {
+            enable: true,
+            distance: 150,
+            color: "#10b981",
+            opacity: 0.3,
+            width: 1
+          },
+          move: {
+            enable: true,
+            speed: 0.8,
+            direction: "none",
+            random: false,
+            straight: false,
+            outModes: "out",
+            attract: {
+              enable: false,
+              rotateX: 600,
+              rotateY: 1200
+            }
+          }
+        },
+        interactivity: {
+          detectsOn: "canvas",
+          events: {
+            onHover: {
+              enable: true,
+              mode: "grab"
+            },
+            onClick: {
+              enable: true,
+              mode: "push"
+            },
+            resize: true
+          },
+          modes: {
+            grab: {
+              distance: 140,
+              links: {
+                opacity: 0.8
+              }
+            },
+            push: {
+              quantity: 3
+            }
+          }
+        },
+        detectRetina: true
+      });
+    } catch (error) {
+      console.error("Failed to load particles:", error);
+    }
+  });
 </script>
 
-<section id="projects" class="py-24 bg-gradient-to-br from-emerald-100 via-white to-teal-100">
-  <div class="section-container">
+<style>
+  .card {
+    background-color: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(5px);
+    border-radius: 0.5rem;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  }
+  
+  #projects-particles {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+  
+  .content-wrapper {
+    position: relative;
+    z-index: 2;
+  }
+</style>
+
+<section id="projects" class="py-24 bg-gradient-to-br from-emerald-100 via-white to-teal-100 relative">
+  <!-- Particles Background -->
+  <div id="projects-particles"></div>
+  
+  <div class="section-container content-wrapper">
     <div class="text-center mb-16">
       <h2 class="text-4xl md:text-5xl font-bold mb-4">Featured Projects</h2>
       <p class="text-xl text-dark/70 max-w-2xl mx-auto">

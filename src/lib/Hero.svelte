@@ -7,7 +7,7 @@
     { href: 'https://twitter.com/https://x.com/lorenzofilipsss', icon: 'twitter', label: 'Twitter' }
   ];
 
-  const words = ['Creative', 'Modern', 'Experienced'];
+  const words = ['Creative', 'Modern', 'Experienced', 'Professional'];
   let currentIndex = 0;
   let currentWord = words[currentIndex];
   let isAnimating = false;
@@ -21,8 +21,107 @@
     }, 500);
   }
 
-  onMount(() => {
+  onMount(async () => {
     setInterval(rotateWord, 3000);
+    
+    // Initialize particles - using the proper module loading approach for Svelte
+    try {
+      // Import the required modules
+      const { tsParticles } = await import('tsparticles-engine');
+      const { loadSlim } = await import('tsparticles-slim');
+      
+      // Initialize the slim bundle
+      await loadSlim(tsParticles);
+      
+      // Load the particles configuration
+      await tsParticles.load('particles', {
+        fullScreen: { enable: false },
+        fpsLimit: 60,
+        particles: {
+          number: {
+            value: 80,
+            density: {
+              enable: true,
+              value_area: 800
+            }
+          },
+          color: {
+            value: ["#10b981", "#059669", "#d1fae5"]
+          },
+          shape: {
+            type: "circle"
+          },
+          opacity: {
+            value: 0.5,
+            random: true,
+            anim: {
+              enable: true,
+              speed: 1,
+              opacity_min: 0.1,
+              sync: false
+            }
+          },
+          size: {
+            value: 3,
+            random: true,
+            anim: {
+              enable: true,
+              speed: 2,
+              size_min: 0.3,
+              sync: false
+            }
+          },
+          links: {
+            enable: true,
+            distance: 150,
+            color: "#10b981",
+            opacity: 0.4,
+            width: 1
+          },
+          move: {
+            enable: true,
+            speed: 1,
+            direction: "none",
+            random: false,
+            straight: false,
+            outModes: "out",
+            attract: {
+              enable: false,
+              rotateX: 600,
+              rotateY: 1200
+            }
+          }
+        },
+        interactivity: {
+          detectsOn: "canvas",
+          events: {
+            onHover: {
+              enable: true,
+              mode: "grab"
+            },
+            onClick: {
+              enable: true,
+              mode: "push"
+            },
+            resize: true
+          },
+          modes: {
+            grab: {
+              distance: 140,
+              links: {
+                opacity: 1
+              }
+            },
+            push: {
+              quantity: 4
+            }
+          }
+        },
+        detectRetina: true
+      });
+    } catch (error) {
+      console.error("Failed to load particles:", error);
+    }
   });
 </script>
 
@@ -53,25 +152,44 @@
       opacity: 1;
     }
   }
+
+  #particles {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+
+  .content-wrapper {
+    position: relative;
+    z-index: 2;
+  }
 </style>
 
 <section class="min-h-screen relative overflow-hidden bg-gradient-to-br from-emerald-100 via-white to-teal-100">
+  <!-- Particles Background -->
+  <div id="particles"></div>
+
   <!-- Background -->
   <div class="absolute inset-0">
     <div class="absolute inset-0 bg-grid-pattern opacity-[0.2]"></div>
   </div>
 
   <!-- Content -->
-  <div class="section-container relative pt-32 pb-20 min-h-screen flex items-center">
+  <div class="section-container relative pt-32 pb-20 min-h-screen flex items-center content-wrapper">
     <div class="max-w-3xl">
       <h1 class="text-5xl md:text-6xl font-bold mb-6 animate-slide-up">
         <span class="gradient-text word-rotate" class:animate-out={isAnimating}>{currentWord}</span>
         <br />
-        Web Developer 🚀
+        Web & Mobile 
+        <br />
+        Software Developer 🚀
       </h1>
       
       <p class="text-xl md:text-2xl text-dark/70 mb-12 animate-slide-up" style="animation-delay: 200ms">
-        Crafting exceptional web & mobile experiences through elegant code and thoughtful design.
+        Crafting exceptional full-stack web & mobile experiences through elegant code and thoughtful design.
       </p>
 
       <div class="flex flex-col sm:flex-row gap-4 animate-slide-up" style="animation-delay: 400ms">

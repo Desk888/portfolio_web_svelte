@@ -5,6 +5,7 @@
   let isMenuOpen = false;
 
   const navItems = [
+    { href: '#', text: 'Home' },
     { href: '#about', text: 'About' },
     { href: '#projects', text: 'Projects' },
     { href: '#skills', text: 'Skills' },
