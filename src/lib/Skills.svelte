@@ -39,7 +39,7 @@
 <section id="skills" class="py-24 bg-gradient-to-br from-emerald-100 via-white to-teal-100">
   <div class="section-container">
     <div class="text-center mb-16">
-      <h2 class="text-4xl md:text-5xl font-bold mb-4">Skills & Expertise ⚒️</h2>
+      <h2 class="text-4xl md:text-5xl font-bold mb-4">Skills & Expertise</h2>
       <p class="text-xl text-dark/70 max-w-2xl mx-auto">
         A comprehensive overview of my technical skills and proficiency levels.
       </p>

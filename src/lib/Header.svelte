@@ -27,9 +27,9 @@
   <nav class="section-container">
     <div class="flex items-center justify-between h-16 md:h-20 relative">
       <!-- Logo -->
-      <a href="#" class="flex items-center">
-        <div class="w-10 h-10 bg-primary rounded-full flex items-center justify-center">
-          <svg class="w-6 h-6 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+      <a href="/" class="flex items-center">
+        <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center">
+          <svg class="w-7 h-7 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
             <path d="M16 18L22 12L16 6" stroke-linecap="round" stroke-linejoin="round"/>
             <path d="M8 6L2 12L8 18" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
@@ -42,7 +42,7 @@
           <li>
             <a
               href={item.href}
-              class="text-dark/70 hover:text-primary font-medium transition-colors"
+              class="text-dark/70 hover:text-primary font-medium transition-colors relative after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-primary after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-300 after:origin-left pb-1"
             >
               {item.text}
             </a>
@@ -73,7 +73,7 @@
             <li>
               <a
                 href={item.href}
-                class="block px-4 py-2 text-dark/70 hover:bg-gray-50 hover:text-primary"
+                class="block px-4 py-2 text-dark/70 hover:bg-gray-50 hover:text-primary relative after:absolute after:bottom-0 after:left-4 after:right-4 after:h-0.5 after:bg-primary after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-300 after:origin-left"
                 on:click={() => isMenuOpen = false}
               >
                 {item.text}
@@ -84,4 +84,6 @@
       </div>
     {/if}
   </nav>
+  <!-- Dividing line -->
+  <div class="h-[1px] bg-slate-200"></div>
 </header>
