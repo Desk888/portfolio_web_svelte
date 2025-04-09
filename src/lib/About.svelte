@@ -4,7 +4,7 @@
       <div class="relative max-w-[40%] mx-auto md:max-w-[70%]">
         <div class="aspect-square rounded-full overflow-hidden">
           <img
-            src="/public/about_image.PNG"
+            src="https://portfolio-website-assets-cdn.s3.eu-west-2.amazonaws.com/about_photo"
             alt="Profile"
             class="object-cover"
           />
